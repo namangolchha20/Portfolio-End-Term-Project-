@@ -15,13 +15,18 @@ header {
     top: 0;
     width: 100%;
     background: rgba(0, 0, 0, 1);
-    margin-bottom: 60px;
 }
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
+}
+#menu-toggle {
+    display: none;
+    visibility: hidden;
+    position: absolute;
+    left: -9999px;
 }
 .logo {
     font-family: 'Bebas Neue', sans-serif;
@@ -87,7 +92,7 @@ header {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 .heading {
-    margin: 40px 0 40px;
+    margin: 0px 0 40px;
     font-size: 65px;
     text-align: center;
     font-family: 'Bebas Neue', sans-serif;
@@ -102,7 +107,7 @@ header {
 #about {
     max-width: 1200px;
     margin: auto;
-    margin-top: 160px;
+    margin-top: 120px;
     padding: 20px;
     font-size: 40px;
     text-align: center;
@@ -187,5 +192,103 @@ h3:hover {
     100%{color: rgb(130, 252, 242)}
 }
 @media (max-width: 768px) {
-
+    .navbar {
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+        position: relative;
+    }
+    .navlinks {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0%;
+        right: -100%;
+        width: 25%;
+        height: 30%;
+        background: rgba(0, 0, 0, 0.95);
+        border-radius: 12px 0 0 12px;
+        gap: 20px;
+        transition: right 0.4s ease;
+        z-index: 99;
+    }
+    #menu-toggle:checked ~ .navlinks {
+        right: 0;
+    }
+    .hamburger {
+        display: block;
+        font-size: 32px;
+        color: rgb(130, 252, 242);
+        cursor: pointer;
+        user-select: none;
+        z-index: 100;
+    }
+    #menu-toggle {
+        display: none;
+    }
+    .logo {
+        font-size: 30px;
+    }
+    #text {
+        font-size: 22px;
+    }
+    #intro1 {
+        font-size: 40px;
+    }
+    #intro2 {
+        font-size: 35px;
+    }
+    #intro3 {
+        font-size: 45px;
+    }
+    .images {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+    .pic {
+        height: 250px;
+        width: 200px;
+    }
+    #about {
+        font-size: 24px;
+        margin-top: 80px;
+        padding: 20px;
+    }
+    .heading {
+        font-size: 45px;
+    }
+    .container {
+        flex-direction: column;
+        margin: 0 20px;
+        gap: 30px;
+    }
+    .box {
+        width: 100%;
+        height: auto;
+        padding: 15px;
+    }
+    h3 {
+        font-size: 30px;
+    }
+    .box p {
+        font-size: 22px;
+    }
+    .b {
+        width: 120px;
+        height: 50px;
+    }
+    .card {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .card img {
+        width: 250px;
+        height: 350px;
+    }
+    #contact p {
+        font-size: 24px;
+    }
 }
