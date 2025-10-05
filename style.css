@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+}
 body {
     background: linear-gradient(90deg, rgb(11, 6, 122) 0%, rgb(245, 82, 209) 50%, rgb(6, 124, 85) 100%);
     line-height: 1.6;
@@ -160,4 +163,5 @@ h3:hover {
         height: 220px;
         padding: 20px;
     }
+
 }
