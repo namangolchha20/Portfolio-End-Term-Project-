@@ -15,6 +15,7 @@ header {
     top: 0;
     width: 100%;
     background: rgba(0, 0, 0, 1);
+    margin-bottom: 60px;
 }
 .navbar {
     display: flex;
@@ -26,6 +27,10 @@ header {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 40px;
     color: rgb(130, 252, 242);
+    animation-name: change;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-timing-function: ease;
 }
 .navlinks {
     list-style: none;
@@ -128,6 +133,7 @@ header {
     border-radius: 12px;
     color: #ffd67f;
     padding: 20px;
+    text-align: center;
 }
 h3 {
     margin: 10px 0 20px;
@@ -144,24 +150,42 @@ h3:hover {
 .box p {
     font-size: 30px;
     margin-bottom: 20px;
+    text-align: none;
+}
+.b {
+    background-color: rgb(169, 81, 252);
+    height: 70px;
+    width: 150px;
+    margin: auto;
+    align-content: center;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+}
+.box a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+}
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 450px;
+}
+.card img {
+    border-radius: 11%;
+    width: 400px;
+    height: 600px;
+    border: 2px 2px 5px #000;
+}
+@keyframes change {
+    0%{color: rgb(130, 252, 242)}
+    20%{color: rgb(8, 8, 218)}
+    40%{color: rgb(182, 11, 182)}
+    60%{color: rgb(235, 23, 111)}
+    80%{color: gold}
+    90%{color: lawngreen;}
+    100%{color: rgb(130, 252, 242)}
 }
 @media (max-width: 768px) {
-    .nav-links {
-        position: absolute;
-        right: 0;
-        top: 70px;
-        background: rgba(0, 0, 0, 0.9);
-        flex-direction: column;
-        width: 200px;
-        height: 0;
-        overflow: hidden;
-        gap: 20px;
-        padding: 0;
-        transition: height 0.3s ease;
-    }
-    .nav-links.open {
-        height: 220px;
-        padding: 20px;
-    }
 
 }
