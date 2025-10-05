@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Perspective Image</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            min-height: 100vh;
+            background-color: #333;
+        }
+        .image {
+            perspective: 4000px; /* It is used to determine the distance between the z plane and the user in order to give a 3D position element some perspective.*/
+            width: 70%;
+            position: absolute;
+            left: 50%;
+            top: 0%;
+            transform: translate(-50%, 50%);
+            transform-style: preserve-3d; /* It indicates that the children of the element should be positioned on the 3D space. */
+        }
+        img {
+            transform: rotateX(70deg) rotateZ(-60deg) translate3D(-120px, 0px, 70px);
+            box-shadow: -80px 60px 15px 5px rgba(0,0,0,0.4);
+            transition: all 0.4s;
+            transform-style: preserve-3d;
+        }
+        img:hover {
+            transform: rotateX(0deg) rotateZ(0deg) translate3d(0px, 0px, 0px);
+            box-shadow: 0px 0px 0px 0px rgba(0,0,0,0); /* We can design many CSS effects using these properties */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image">
+            <img src="https://img.freepik.com/free-photo/fantasy-landscape-with-butterfly_23-2151451739.jpg?semt=ais_hybrid&w=740&q=80" alt="Butterfly">
+        </div>
+    </div>
+</body>
+</html>
